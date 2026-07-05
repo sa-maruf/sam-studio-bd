@@ -95,3 +95,6 @@ sam-studio/
   for easy local editing. Before deploying publicly, add real authentication
   (e.g. a login gate, or put it behind your hosting provider's password
   protection) so strangers can't upload or edit content.
+
+  Main Siite: https://samstudiobd.netlify.app/
+  Admin Page: https://samstudiobd.netlify.app/sam.admin.ms
