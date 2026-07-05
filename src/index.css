@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #E8B23D #15151D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-paper font-body;
+  background-image:
+    radial-gradient(circle at 20% -10%, rgba(232,178,61,0.08), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(214,69,69,0.06), transparent 35%);
+  background-attachment: fixed;
+}
+
+/* Signature element: sprocket / film-strip perforation rule */
+.sprockets {
+  position: relative;
+  height: 10px;
+  background-image: radial-gradient(circle, #E8B23D 1.5px, transparent 2.6px);
+  background-size: 18px 10px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.sprockets-gold {
+  background-image: radial-gradient(circle, #E8B23D 1.5px, transparent 2.6px);
+}
+
+/* Ticket-stub notch for cards */
+.ticket-notch::before,
+.ticket-notch::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #0B0B0F;
+  border-radius: 9999px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.ticket-notch::before { left: -8px; }
+.ticket-notch::after { right: -8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
